@@ -1,0 +1,153 @@
+:root {
+    /* primary */
+    --darkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+  
+    /* neutral */
+    --veryDarkBlue: hsl(212, 21%, 14%);
+    --darkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-color: var(--Cream);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+  }
+  
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* smallest height it can go else add scroll */
+  }
+  
+  /* flex card */
+  .card-container {
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* horizontal for container */
+    border-radius: 10px;
+    margin: 1em;
+  }
+  
+  .img {
+    content: url("images/image-product-mobile.jpg");
+    width: 20em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  /*  space btw card and footer*/
+  .product {
+    width: 18em;
+    padding: 2em;
+  }
+  
+  .perfume {
+    color: var(--darkGrayishBlue);
+    letter-spacing: 5px;
+    padding-bottom: 1em;
+  }
+  
+  /* typography */
+  h1 {
+    font-family: "Fraunces", serif;
+    color: var(--veryDarkBlue);
+    padding: 0 0 0.5em;
+    font-size: 1.5em;
+  }
+  
+  p {
+    color: var(--darkGrayishBlue);
+    line-height: 1.5;
+    font-size: 0.875em;
+  }
+  
+  /* price */
+  .price {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+  }
+  
+  .discount {
+    color: var(--darkCyan);
+    font-size: 2.1em;
+    font-family: "Fraunces", serif;
+  }
+  
+  .initial-price {
+    padding-left: 1em;
+    text-decoration-line: line-through;
+    color: var(--darkGrayishBlue);
+  }
+  
+  /* add to cart button */
+  #cart {
+    padding-right: 0.5em;
+  }
+  
+  button {
+    background-color: var(--darkCyan);
+    color: var(--White);
+    width: 100%;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    font-family: "Fraunces", serif;
+    font-size: 1em;
+  }
+  
+  button:hover,
+  button:focus {
+    background-color: hsl(158, 45%, 20%);
+    outline: none;
+  }
+  
+  /* footer */
+  footer {
+    font-size: 0.6875em;
+    text-align: center;
+  }
+  
+  footer a {
+    color: var(--darkCyan);
+    text-decoration-line: none;
+  }
+  
+  /* for screen higher than 600px */
+  @media only screen and (min-width: 600px) {
+    .img {
+      content: url("images/image-product-desktop.jpg");
+      width: 18em;
+      height: 25em;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 10px;
+    }
+  
+    .product {
+      height: 25em;
+    }
+  
+    .card-container {
+      flex-direction: row;
+      justify-content: space-between; /* vertical for container */
+    }
+  
+    h1 {
+      line-height: 1;
+      font-size: 1rem;
+    }
+  
+    p {
+      font-size: 0.89rem;
+    }
+  }
+  
